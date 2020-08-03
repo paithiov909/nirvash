@@ -7,7 +7,7 @@ Author: paithiov909 [aut, cre]
 Maintainer: Kato Akiru <paithiov909@gmail.com>
 Description: 'vertical-rl' styled text block component
     powered by nehan.js (v5.5.10).
-License: What license is it under?
+License: MIT + file LICENSE
 URL: https://github.com/paithiov909/nirvash
 BugReports: https://github.com/paithiov909/nirvash/issues
 Encoding: UTF-8

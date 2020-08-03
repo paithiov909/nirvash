@@ -11,8 +11,6 @@
 #'
 #' @return object returned from htmlwidgets::createWidget()
 #'
-#' @name nirvash
-#'
 #' @import htmlwidgets
 #' @importFrom dplyr case_when
 #' @export
