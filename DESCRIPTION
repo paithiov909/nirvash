@@ -1,0 +1,25 @@
+Package: nirvash
+Type: Package
+Title: Vertical-Styled Text Block Component
+Version: 0.0.1
+Authors@R: person("Kato", "Akiru", email = "paithiov909@gmail.com", role = c("aut", "cre"))
+Author: paithiov909 [aut, cre]
+Maintainer: Kato Akiru <paithiov909@gmail.com>
+Description: 'vertical-rl' styled text block component
+    powered by nehan.js (v5.5.10).
+License: What license is it under?
+URL: https://github.com/paithiov909/nirvash
+BugReports: https://github.com/paithiov909/nirvash/issues
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    htmlwidgets,
+    dplyr
+RoxygenNote: 7.1.1
+Suggests: 
+    spelling,
+    knitr,
+    rmarkdown,
+    sessioninfo
+Language: en-US
+VignetteBuilder: knitr

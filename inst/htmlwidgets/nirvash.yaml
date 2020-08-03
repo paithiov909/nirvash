@@ -1,0 +1,13 @@
+dependencies:
+ - name: nehan
+   version: 5.5.10
+   src: htmlwidgets/lib/nehan
+   script:
+    - nehan.min.js
+   stylesheet:
+    - nehan.css
+ - name: underscore
+   version: 1.10.2
+   src: htmlwidgets/lib/underscore
+   script:
+    - underscore.js

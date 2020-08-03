@@ -1,0 +1,8 @@
+destination: docs
+
+url: https://paithiov909.github.io/nirvash
+
+template:
+  opengraph:
+    twitter:
+      creator: "@paithiov909"
