@@ -1,8 +1,7 @@
 pandoc: 2.9.2.1
 pkgdown: 1.4.1
 pkgdown_sha: cdd834011ab1f0a8dd7d84428d19a4a63800c4d4
-articles:
-  demo: demo.html
+articles: []
 urls:
   reference: https://paithiov909.github.io/nirvash/reference
   article: https://paithiov909.github.io/nirvash/articles

@@ -32,7 +32,7 @@ nirvash <- function(context,
 
     # forward options using x
     x <- list(
-      mode = mode,
+      mode = mode[1],
       context = paste(context),
       split = split,
       selif = serif,

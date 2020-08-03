@@ -24,11 +24,13 @@ HTMLWidgets.widget({
 
     return {
 
-      // Instances
+      // NehanInstance
       NehanInstance: instance,
 
       // Main Renderer
       renderValue: function (x) {
+
+        // console.info(this.NehanInstance);
 
         const rows = ( x.split === "" )
           ? [x.context]
@@ -38,23 +40,23 @@ HTMLWidgets.widget({
         }, "");
 
         if (isValidHTML(item)) {
-          instance.setContent(wrapper({ item: item, custom_style: x.custom_style }));
+          this.NehanInstance.setContent(wrapper({ item: item, custom_style: x.custom_style }));
         } else {
-          instance.setContent(wrapper({ item: `<p>Umm, something goes wrong...</p>`, custom_style: x.custom_style }));
+          this.NehanInstance.setContent(wrapper({ item: `<p>Umm, something goes wrong...</p>`, custom_style: x.custom_style }));
         }
-        instance.setStyle("body", {
+        this.NehanInstance.setStyle("body", {
           display: "inline-block",
           flow: x.mode,
           width: width,
           height: height
         });
         if (Boolean(x.serif)) {
-          instance.setStyle(".serif", {
+          this.NehanInstance.setStyle(".serif", {
               "font-family": "'Noto Serif JP', 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', sans-serif"
           });
         }
 
-        instance.render({
+        this.NehanInstance.render({
           onPage: (page, ctx) => {
             el.appendChild(page.element);
             el.appendChild(document.createElement("hr"));
@@ -65,7 +67,7 @@ HTMLWidgets.widget({
 
       // Resizer
       resize: function (width, height) {
-        instance.setStyle("body", {
+        this.NehanInstance.setStyle("body", {
           width: width,
           height: height,
         });
