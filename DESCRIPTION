@@ -1,7 +1,7 @@
 Package: nirvash
 Type: Package
 Title: Vertical-Styled Text Block Component
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person("Kato", "Akiru", email = "paithiov909@gmail.com", role = c("aut", "cre"))
 Author: paithiov909 [aut, cre]
 Maintainer: Kato Akiru <paithiov909@gmail.com>

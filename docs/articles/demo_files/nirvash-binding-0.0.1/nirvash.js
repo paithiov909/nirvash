@@ -5,17 +5,26 @@ HTMLWidgets.widget({
 
   factory: function (el, width, height) {
 
-    const instance = new Nehan.Document();
+    // Nehan instance
+    const instance = new Nehan.Document()
+        .setStyle("hr", {
+        	"border-top": "1px solid #8c8b8b",
+        	"border-bottom": "1px solid #fff",
+        })
+        .setStyle("hr:after", {
+          content: '',
+          display: "block",
+          "margin-top": "2px",
+          "border-top": "1px solid #8c8b8b",
+          "border-bottom": "1px solid #fff",
+        });
 
-    // Templates
-    const wrapper = _.template(`
-      <div style="padding: 1.5em; display: flex; justify-content: center; align-items: center; <%= custom_style %>" role="presentation"><%= item %></div>
-    `);
-    const compile = _.template(`
-      <div class="serif"><%= row %></div>
-    `);
-
-    // Helper functions
+    /**
+     * HTML structure checker
+     * @function isValidHTML
+     * @param {String} html
+     * @return {Boolean} true or false
+     */
     function isValidHTML (html) {
       const doc = document.createElement("div");
       doc.innerHTML = html;
@@ -24,31 +33,34 @@ HTMLWidgets.widget({
 
     return {
 
-      // NehanInstance
+      // Keep instance
       NehanInstance: instance,
 
-      // Main Renderer
+      /**
+       * Renderer
+       * @function renderValue
+       */
       renderValue: function (x) {
 
-        // console.info(this.NehanInstance);
+        // console.info(this.NehanInstance); // DBEUG use
 
         const rows = ( x.split === "" )
           ? [x.context]
           : x.context.split(x.split);
         const item = _.reduce(rows, (memo, row) => {
-          return memo + compile({ row: row });
+          return memo + this.compile({ row: row });
         }, "");
 
         if (isValidHTML(item)) {
-          this.NehanInstance.setContent(wrapper({ item: item, custom_style: x.custom_style }));
+          this.NehanInstance.setContent(this.wrapper({ item: item, custom_style: x.custom_style }));
         } else {
-          this.NehanInstance.setContent(wrapper({ item: `<p>Umm, something goes wrong...</p>`, custom_style: x.custom_style }));
+          this.NehanInstance.setContent(this.wrapper({ item: `<p>Umm, seems somthing went wrong...</p>`, custom_style: x.custom_style }));
         }
         this.NehanInstance.setStyle("body", {
           display: "inline-block",
           flow: x.mode,
           width: width,
-          height: height
+          height: height,
         });
         if (Boolean(x.serif)) {
           this.NehanInstance.setStyle(".serif", {
@@ -65,13 +77,29 @@ HTMLWidgets.widget({
 
       },
 
-      // Resizer
+      /**
+       * Resize the widget when window resized.
+       * @function resize
+       */
       resize: function (width, height) {
         this.NehanInstance.setStyle("body", {
           width: width,
           height: height,
         });
       },
+
+      /**
+       * Wrapper template.
+       * @fucntion wrapper
+       * @return {String} HTML string
+       */
+      wrapper: _.template(`<div style="padding: 1.5em; display: flex; justify-content: center; align-items: center; <%= custom_style %>" role="presentation"><%= item %></div>`),
+      /**
+       * Wrapper template.
+       * @function compile
+       * @return {String} HTML string
+       */
+      compile: _.template(`<div class="serif"><%= row %></div>`),
 
     };
   }
