@@ -1,0 +1,43 @@
+---
+author: "Ito, Sachio"
+date: "`r Sys.Date()`"
+---
+
+# Use Case: Shiki-to-Waka
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+if (!require(nirvash)) { pkgload::load_all() }
+stopifnot(require(dplyr))
+stopifnot(require(rjavacmecab))
+```
+
+## Snippet
+
+### 底本
+
+- [図書カード：子規と和歌](https://www.aozora.gr.jp/cards/000058/card57469.html)
+
+### Download file
+
+```{r}
+url <- "https://www.aozora.gr.jp/cards/000058/files/57469_ruby_65939.zip"
+file_path <- rjavacmecab::aozora(
+    url,
+    directory = ""
+)
+text <- readLines(file_path, encoding = "UTF-8")
+unlink(file_path)
+dplyr::glimpse(text)
+```
+
+## Output
+
+```{r display}
+nirvash(text, height = "90%")
+```
+
