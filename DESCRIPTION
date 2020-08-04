@@ -20,6 +20,7 @@ Suggests:
     spelling,
     knitr,
     rmarkdown,
-    sessioninfo
+    sessioninfo,
+    pkgload
 Language: en-US
 VignetteBuilder: knitr

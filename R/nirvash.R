@@ -23,7 +23,7 @@ nirvash <- function(context,
                     height = "90%") {
   if (!is.character(context)) {
     message("Context must be a character vector.")
-    invisible(paste(context, collapse = split))
+    invisible(context)
   } else {
 
     # detect writing-mode (flow)

@@ -15,10 +15,8 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-if (!require(nirvash)) { devtools::load_all() }
-stopifnot(require(dplyr))
-stopifnot(require(stringr))
-stopifnot(require(readr))
+if (!require(nirvash)) { pkgload::load_all() }
+require(dplyr)
 ```
 
 ## レンダリングの例
@@ -37,7 +35,7 @@ file_path <- rjavacmecab::aozora(
 )
 text <- readLines(file_path, encoding = "UTF-8")
 unlink(file_path)
-glimpse(text)
+dplyr::glimpse(text)
 ```
 
 ```{r display}
