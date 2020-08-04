@@ -1,0 +1,45 @@
+---
+title: "Use Case: Ha written by Dazai Osamu"
+author: "Dazai Osamu"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Use Case: Ha written by Dazai Osamu}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+if (!require(nirvash)) { devtools::load_all() }
+stopifnot(require(dplyr))
+stopifnot(require(stringr))
+stopifnot(require(readr))
+```
+
+## レンダリングの例
+
+太宰治「葉」を青空文庫からダウンロードして表示してみます。
+
+文章は[これ](https://paithiov909.github.io/rjavacmecab/reference/aozora.html)を使ってダウンロードします。
+
+- [図書カード：葉](https://www.aozora.gr.jp/cards/000035/card2288.html)
+- [ダウンロードするファイル](https://www.aozora.gr.jp/cards/000035/files/2288_ruby_33103.zip)
+
+```{r aozora}
+file_path <- rjavacmecab::aozora(
+    "https://www.aozora.gr.jp/cards/000035/files/2288_ruby_33103.zip",
+    directory = ""
+)
+text <- readLines(file_path, encoding = "UTF-8")
+unlink(file_path)
+glimpse(text)
+```
+
+```{r display}
+nirvash(text, height = "70%")
+```

@@ -3,7 +3,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-> Vertical-Styled Text Block Component
+> Forced-Vertical-Styled Text Block Component
 
 ## About
 

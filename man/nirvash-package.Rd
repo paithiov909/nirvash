@@ -4,7 +4,7 @@
 \name{nirvash-package}
 \alias{nirvash}
 \alias{nirvash-package}
-\title{nirvash: Vertical-Styled Text Block Component}
+\title{nirvash: Forced-Vertical-Styled Text Block Component}
 \description{
 'vertical-rl' styled text block component
     powered by nehan.js (v5.5.10).

@@ -17,13 +17,13 @@ nirvash(
 \arguments{
 \item{context}{text to disply on widget.}
 
-\item{split}{string with that nirbash splits the context into paragraphs.}
+\item{split}{string with that nirvash splits the context into paragraphs.}
 
-\item{serif}{boolean. if true, set an additional style onto `.serif` class elements.}
+\item{serif}{boolean. if true, sets an additional style onto `.serif` class elements.}
 
-\item{writing_mode}{choose from "tbrl" or "lrtb".}
+\item{writing_mode}{choose one of "tbrl" or "lrtb".}
 
-\item{custom_style}{user's own defined sytle that will be attached onto component's wrapper directly.}
+\item{custom_style}{user's own defined sytle that will be attached onto component's wrapper.}
 }
 \value{
 object returned from htmlwidgets::createWidget()

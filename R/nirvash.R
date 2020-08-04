@@ -4,10 +4,10 @@
 #' powered by nehan.js (v5.5.10).
 #'
 #' @param context text to disply on widget.
-#' @param split string with that nirbash splits the context into paragraphs.
-#' @param serif boolean. if true, set an additional style onto `.serif` class elements.
-#' @param writing_mode choose from "tbrl" or "lrtb".
-#' @param custom_style user's own defined sytle that will be attached onto component's wrapper directly.
+#' @param split string with that nirvash splits the context into paragraphs.
+#' @param serif boolean. if true, sets an additional style onto `.serif` class elements.
+#' @param writing_mode choose one of "tbrl" or "lrtb".
+#' @param custom_style user's own defined sytle that will be attached onto component's wrapper.
 #'
 #' @return object returned from htmlwidgets::createWidget()
 #'
@@ -23,17 +23,19 @@ nirvash <- function(context,
                     height = "90%") {
   if (!is.character(context)) {
     message("Context must be a character vector.")
-    invisible(context)
+    invisible(paste(context, collapse = split))
   } else {
+
+    # detect writing-mode (flow)
     mode <- dplyr::case_when(
-      writing_mode == "lrtb" ~ "lr-tb",
+      writing_mode[1] == "lrtb" ~ "lr-tb",
       TRUE ~ "tb-rl"
     )
 
     # forward options using x
     x <- list(
       mode = mode[1],
-      context = paste(context),
+      context = paste(context, collapse = split),
       split = split,
       selif = serif,
       custom_style = custom_style

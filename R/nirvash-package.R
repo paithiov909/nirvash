@@ -1,4 +1,4 @@
-#' nirvash: Vertical-Styled Text Block Component
+#' nirvash: Forced-Vertical-Styled Text Block Component
 #' @docType package
 #' @keywords internal
 "_PACKAGE"
