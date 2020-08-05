@@ -1,11 +1,11 @@
 Package: nirvash
 Type: Package
-Title: Forced-Vertical-Styled Text Block Component
-Version: 0.0.2
+Title: Put Texts with 'writing-mode: tb-rl';
+Version: 0.0.3
 Authors@R: person("Kato", "Akiru", email = "paithiov909@gmail.com", role = c("aut", "cre"))
 Author: paithiov909 [aut, cre]
 Maintainer: Kato Akiru <paithiov909@gmail.com>
-Description: 'vertical-rl' styled text block component
+Description: 'tb-rl' styled text block component
     powered by nehan.js (v5.5.10).
 License: MIT + file LICENSE
 URL: https://github.com/paithiov909/nirvash

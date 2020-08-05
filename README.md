@@ -3,16 +3,13 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-> Forced-Vertical-Styled Text Block Component
+> Put Texts with 'writing-mode: tb-rl';
 
 ## About
 
-CJKな文字列を縦書きしたいときに使える、[nehan.js v5.5.10](https://github.com/tategakibunko/nehan.js/releases/tag/v5.5.10)をラップしたHTML Widgetです。
+An R HTML widget that wraps [nehan.js v5.5.10](https://github.com/tategakibunko/nehan.js/releases/tag/v5.5.10). It helps you to put CJK texts vertical.
 
-**{nirvash} components are NOT press-ready!!**
-
-- nehan.jsの実装の都合上、テキストをコピーしたり内容をサイト内検索したりする場合には向いていません。
-- HTML widgetなのでPDFなどに埋め込むには何らかの工夫が必要です。
+**{nirvash} components are NOT press-ready!!** Due to the implementation of nehan.js, it is not suitable for your copying text or searching contents on the site.
 
 ## Installation
 

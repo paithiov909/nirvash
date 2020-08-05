@@ -24,11 +24,15 @@ nirvash(
 \item{writing_mode}{choose one of "tbrl" or "lrtb".}
 
 \item{custom_style}{user's own defined sytle that will be attached onto component's wrapper.}
+
+\item{width}{width of components.}
+
+\item{height}{height of components}
 }
 \value{
 object returned from htmlwidgets::createWidget()
 }
 \description{
-`vertical-rl` styled component
+`tb-rl` styled component
 powered by nehan.js (v5.5.10).
 }

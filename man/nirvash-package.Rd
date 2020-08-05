@@ -4,9 +4,9 @@
 \name{nirvash-package}
 \alias{nirvash}
 \alias{nirvash-package}
-\title{nirvash: Forced-Vertical-Styled Text Block Component}
+\title{nirvash: Put Texts with 'writing-mode: tb-rl';}
 \description{
-'vertical-rl' styled text block component
+'tb-rl' styled text block component
     powered by nehan.js (v5.5.10).
 }
 \seealso{

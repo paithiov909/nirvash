@@ -1,6 +1,6 @@
 #' Nirvash HTML Widget
 #'
-#' `vertical-rl` styled component
+#' `tb-rl` styled component
 #' powered by nehan.js (v5.5.10).
 #'
 #' @param context text to disply on widget.
@@ -8,6 +8,8 @@
 #' @param serif boolean. if true, sets an additional style onto `.serif` class elements.
 #' @param writing_mode choose one of "tbrl" or "lrtb".
 #' @param custom_style user's own defined sytle that will be attached onto component's wrapper.
+#' @param width width of components.
+#' @param height height of components
 #'
 #' @return object returned from htmlwidgets::createWidget()
 #'

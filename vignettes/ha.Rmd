@@ -40,5 +40,5 @@ dplyr::glimpse(text)
 ```
 
 ```{r display}
-nirvash(text, height = "70%")
+nirvash(text)
 ```
