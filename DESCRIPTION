@@ -1,6 +1,6 @@
 Package: nirvash
 Type: Package
-Title: Put Texts with 'writing-mode: tb-rl';
+Title: Put Texts 'writing-mode: tb-rl;'
 Version: 0.0.3
 Authors@R: person("Kato", "Akiru", email = "paithiov909@gmail.com", role = c("aut", "cre"))
 Author: paithiov909 [aut, cre]
