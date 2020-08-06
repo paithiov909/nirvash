@@ -3,7 +3,7 @@
 #' `tb-rl` styled component
 #' powered by nehan.js (v5.5.10).
 #'
-#' @param context text to disply on widget.
+#' @param context text to display on widget.
 #' @param split string with that nirvash splits the context into paragraphs.
 #' @param serif boolean. if true, sets an additional style onto `.serif` class elements.
 #' @param writing_mode choose one of "tbrl" or "lrtb".

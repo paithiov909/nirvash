@@ -3,7 +3,7 @@ author: "Ito, Sachio"
 date: "`r Sys.Date()`"
 ---
 
-# Use Case: Shiki-to-Waka
+# Practice: Rendering 'Shiki-to-Waka'
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(

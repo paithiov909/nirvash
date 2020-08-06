@@ -4,7 +4,7 @@
 \name{nirvash-package}
 \alias{nirvash}
 \alias{nirvash-package}
-\title{nirvash: Put Texts with 'writing-mode: tb-rl';}
+\title{nirvash: Put Texts 'writing-mode: tb-rl';}
 \description{
 'tb-rl' styled text block component
     powered by nehan.js (v5.5.10).
@@ -21,4 +21,3 @@ Useful links:
 \strong{Maintainer}: Kato Akiru \email{paithiov909@gmail.com}
 
 }
-\keyword{internal}

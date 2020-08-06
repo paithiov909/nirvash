@@ -15,7 +15,7 @@ nirvash(
 )
 }
 \arguments{
-\item{context}{text to disply on widget.}
+\item{context}{text to display on widget.}
 
 \item{split}{string with that nirvash splits the context into paragraphs.}
 

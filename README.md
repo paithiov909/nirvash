@@ -3,7 +3,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-> Put Texts with 'writing-mode: tb-rl';
+> Put Texts 'writing-mode: tb-rl';
 
 ## About
 

@@ -1,4 +1,3 @@
-#' nirvash: Put Texts with 'writing-mode: tb-rl';
+#' nirvash: Put Texts 'writing-mode: tb-rl';
 #' @docType package
-#' @keywords internal
 "_PACKAGE"

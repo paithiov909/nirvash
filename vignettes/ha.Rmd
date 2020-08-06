@@ -1,10 +1,10 @@
 ---
-title: "Use Case: Ha written by Dazai Osamu"
+title: "Practice: Ha written by Dazai Osamu"
 author: "Dazai Osamu"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Use Case: Ha written by Dazai Osamu}
+  %\VignetteIndexEntry{Practice: Ha written by Dazai Osamu}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

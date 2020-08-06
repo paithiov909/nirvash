@@ -1,9 +1,9 @@
 ---
-title: "Demonstration of nirvash"
+title: "Showcase of nirvash"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Demonstration of nirvash}
+  %\VignetteIndexEntry{Showcase of nirvash}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
