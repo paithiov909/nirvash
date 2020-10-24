@@ -175,7 +175,7 @@ nirvash("
 これは<span class=\"empha-triangle-filled\">圏点</span>です。
 これは<span class=\"empha-sesame-open\">圏点</span>です。
 これは<span class=\"empha-sesame-filled\">圏点</span>です。
-", height = "300px")
+")
 ```
 
 ### List Styles
