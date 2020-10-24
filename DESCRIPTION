@@ -1,8 +1,9 @@
 Package: nirvash
 Type: Package
 Title: Put Texts 'writing-mode: tb-rl;'
-Version: 0.0.3
-Authors@R: person("Kato", "Akiru", email = "paithiov909@gmail.com", role = c("aut", "cre"))
+Version: 0.0.4
+Authors@R: c(
+    person("Kato", "Akiru", email = "paithiov909@gmail.com", role = c("aut", "cre")))
 Author: paithiov909 [aut, cre]
 Maintainer: Kato Akiru <paithiov909@gmail.com>
 Description: 'tb-rl' styled text block component
@@ -15,7 +16,6 @@ LazyData: true
 Imports: 
     htmlwidgets,
     dplyr
-RoxygenNote: 7.1.1
 Suggests: 
     spelling,
     knitr,
@@ -23,4 +23,5 @@ Suggests:
     sessioninfo,
     pkgload
 Language: en-US
+RoxygenNote: 7.1.1
 VignetteBuilder: knitr

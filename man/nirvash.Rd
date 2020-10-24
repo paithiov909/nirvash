@@ -15,24 +15,25 @@ nirvash(
 )
 }
 \arguments{
-\item{context}{text to display on widget.}
+\item{context}{Text to display on widget.}
 
-\item{split}{string with that nirvash splits the context into paragraphs.}
+\item{split}{String with that nirvash splits the context into paragraphs.}
 
-\item{serif}{boolean. if true, sets an additional style onto `.serif` class elements.}
+\item{serif}{Boolean. If true, sets an additional style onto `.serif` class elements.}
 
-\item{writing_mode}{choose one of "tbrl" or "lrtb".}
+\item{writing_mode}{Choose one of "tbrl" or "lrtb".}
 
-\item{custom_style}{user's own defined sytle that will be attached onto component's wrapper.}
+\item{custom_style}{User's own defined style that will be attached onto component's wrapper.}
 
-\item{width}{width of components.}
+\item{width}{Width of components.}
 
-\item{height}{height of components}
+\item{height}{Height of components.}
 }
 \value{
-object returned from htmlwidgets::createWidget()
+Object returned from \code{htmlwidgets::createWidget()}.
 }
 \description{
 `tb-rl` styled component
 powered by nehan.js (v5.5.10).
+The widgets do not support resizing.
 }

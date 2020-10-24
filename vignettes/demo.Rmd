@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 if (!require(nirvash)) { pkgload::load_all() }
 ```
 
-## Demo
+## Overview
 
 v5.x系の[nehan.js](https://github.com/tategakibunko/nehan.js)の仕様によります。
 
@@ -87,11 +87,13 @@ nirvash("
 
 HTML文字列をそのままパースするのでタグや組み込みのクラスが使えます。文字列のサニタイズは必要に応じて自分でやってください。
 
+HTML文字列を差し込む前に簡単なチェックをしているため、`"`は必ずエスケープする必要があります。
+
 ```{r has_drop_caps}
 nirvash("
 <h2>雲の信号</h2>
 <p class=\"drop-caps\">あゝいゝな　せいせいするな</p>
-風が吹くし
+<p class=\"xx-large\">風が吹くし</p>
 農具はぴかぴか光つてゐるし
 山はぼんやり
 <ruby>岩頸<rt>がんけい</rt></ruby>だつて<ruby>岩鐘<rt>がんしよう</rt></ruby>だつて
@@ -119,11 +121,97 @@ aa
 5000
 <span class=\"tcy\">5000</span>兆円ほしい
 <span class=\"tcy\">A5</span>ランクの和牛
-")
+", serif = FALSE, writing_mode = "lrtb")
 ```
 
-## SeesionInfo
+## Demo
 
-```{r}
+### Table
+
+#### Horizontal
+
+```{r table_out1}
+table <- "
+<table>
+<thead>
+  <tr>
+    <th>head1</th><th>head2</th><th>head3</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td><td>2</td><td>3</td>
+  </tr>
+  <tr>
+    <td>4</td><td>5</td><td>6</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+    <td>foot1</td><td>foot2</td>
+  </tr>
+</tfoot>
+</table>"
+nirvash(table, split = "", writing_mode = "lrtb", height = "300px")
+```
+
+#### Vertical
+
+```{r table_out2}
+nirvash(table, split = "", writing_mode = "tbrl", height = "300px")
+```
+
+### Emphasis
+
+```{r has_empha}
+nirvash("
+これは<span class=\"empha-dot-open\">圏点</span>です。
+これは<span class=\"empha-dot-filled\">圏点</span>です。
+これは<span class=\"empha-circle-open\">圏点</span>です。
+これは<span class=\"empha-circle-filled\">圏点</span>です。
+これは<span class=\"empha-double-circle-open\">圏点</span>です。
+これは<span class=\"empha-double-circle-filled\">圏点</span>です。
+これは<span class=\"empha-triangle-open\">圏点</span>です。
+これは<span class=\"empha-triangle-filled\">圏点</span>です。
+これは<span class=\"empha-sesame-open\">圏点</span>です。
+これは<span class=\"empha-sesame-filled\">圏点</span>です。
+", height = "300px")
+```
+
+### List Styles
+
+```{r ul_bullet_types}
+nirvash("
+<ul>
+  <li>outer</li>
+  <li><ul class=\"lst-circle\"><li>inner1</li><li>inner2</li></ul></li>
+</ul>
+", split = "", writing_mode = "lrtb")
+```
+
+```{r ol_bullet_types}
+nirvash("
+<ol class=\"lst-none\">
+  <li><ol class=\"lst-lower-alpha\"><li>inner1</li><li>...</li></ol></li>
+  <li><ol class=\"lst-lower-greek\"><li>inner1</li><li>...</li></ol></li>
+  <li><ol class=\"lst-cjk-ideographic\"><li>inner1</li><li>...</li></ol></li>
+  <li><ol class=\"lst-hiragana\"><li>inner1</li><li>...</li></ol></li>
+  <li><ol class=\"lst-lower-alpha\"><li>inner1</li><li>...</li></ol></li>
+  <li><ol class=\"lst-lower-roman\"><li>inner1</li><li>...</li></ol></li>
+</ol>", split = "", writing_mode = "lrtb")
+```
+
+### Page-break
+
+```{r has_page_break}
+nirvash("
+1ページ目<page-break></page-break>
+2ページ目<page-break></page-break>
+3ページ目")
+```
+
+## Seesion Info
+
+```{r session_info}
 sessioninfo::session_info()
 ```

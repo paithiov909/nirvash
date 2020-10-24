@@ -2,16 +2,17 @@
 #'
 #' `tb-rl` styled component
 #' powered by nehan.js (v5.5.10).
+#' The widgets do not support resizing.
 #'
-#' @param context text to display on widget.
-#' @param split string with that nirvash splits the context into paragraphs.
-#' @param serif boolean. if true, sets an additional style onto `.serif` class elements.
-#' @param writing_mode choose one of "tbrl" or "lrtb".
-#' @param custom_style user's own defined sytle that will be attached onto component's wrapper.
-#' @param width width of components.
-#' @param height height of components
+#' @param context Text to display on widget.
+#' @param split String with that nirvash splits the context into paragraphs.
+#' @param serif Boolean. If true, sets an additional style onto `.serif` class elements.
+#' @param writing_mode Choose one of "tbrl" or "lrtb".
+#' @param custom_style User's own defined style that will be attached onto component's wrapper.
+#' @param width Width of components.
+#' @param height Height of components.
 #'
-#' @return object returned from htmlwidgets::createWidget()
+#' @return Object returned from \code{htmlwidgets::createWidget()}.
 #'
 #' @import htmlwidgets
 #' @importFrom dplyr case_when
@@ -25,7 +26,7 @@ nirvash <- function(context,
                     height = "90%") {
   if (!is.character(context)) {
     message("Context must be a character vector.")
-    invisible(context)
+    return(invisible(context))
   } else {
 
     # detect writing-mode (flow)
@@ -36,7 +37,7 @@ nirvash <- function(context,
 
     # forward options using x
     x <- list(
-      mode = mode[1],
+      mode = mode,
       context = paste(context, collapse = split),
       split = split,
       selif = serif,
@@ -59,7 +60,7 @@ nirvash <- function(context,
 #' Output and render functions for using nirvash within Shiny
 #' applications and interactive Rmd documents.
 #'
-#' @param outputId output variable to read from
+#' @param outputId Output variable to read from
 #' @param width,height Must be a valid CSS unit (like \code{'100\%'},
 #'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
 #'   string and have \code{'px'} appended.
