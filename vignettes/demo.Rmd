@@ -121,7 +121,7 @@ aa
 5000
 <span class=\"tcy\">5000</span>兆円ほしい
 <span class=\"tcy\">A5</span>ランクの和牛
-", serif = FALSE, writing_mode = "lrtb")
+", serif = FALSE)
 ```
 
 ## Demo
@@ -207,7 +207,7 @@ nirvash("
 nirvash("
 1ページ目<page-break></page-break>
 2ページ目<page-break></page-break>
-3ページ目")
+3ページ目", writing_mode = "lrtb")
 ```
 
 ## Seesion Info
