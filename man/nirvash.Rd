@@ -19,8 +19,6 @@ nirvash(
 
 \item{split}{String with that nirvash splits the context into paragraphs.}
 
-\item{serif}{Boolean. If true, sets an additional style onto `.serif` class elements.}
-
 \item{writing_mode}{Choose one of "tbrl" or "lrtb".}
 
 \item{custom_style}{User's own defined style that will be attached onto component's wrapper.}
@@ -28,12 +26,14 @@ nirvash(
 \item{width}{Width of components.}
 
 \item{height}{Height of components.}
+
+\item{serir}{Logical. If true, sets an additional style onto \code{.serif} class elements.}
 }
 \value{
 Object returned from \code{htmlwidgets::createWidget()}.
 }
 \description{
-`tb-rl` styled component
+\code{tb-rl} styled component
 powered by nehan.js (v5.5.10).
 The widgets do not support resizing.
 }

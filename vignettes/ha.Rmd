@@ -15,9 +15,11 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-stopifnot(require(dplyr))
-stopifnot(require(rjavacmecab))
-if (!require(nirvash)) { pkgload::load_all() }
+stopifnot(
+  require(dplyr),
+  require(rjavacmecab)
+)
+if (!require(nirvash)) pkgload::load_all()
 ```
 
 ## レンダリングの例

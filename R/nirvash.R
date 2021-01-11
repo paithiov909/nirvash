@@ -6,7 +6,7 @@
 #'
 #' @param context Text to display on widget.
 #' @param split String with that nirvash splits the context into paragraphs.
-#' @param serif Boolean. If true, sets an additional style onto `.serif` class elements.
+#' @param serir Logical. If true, sets an additional style onto `.serif` class elements.
 #' @param writing_mode Choose one of "tbrl" or "lrtb".
 #' @param custom_style User's own defined style that will be attached onto component's wrapper.
 #' @param width Width of components.
